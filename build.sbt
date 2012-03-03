@@ -6,18 +6,12 @@ organization := "org.brianmckenna"
 
 version := "0.1"
 
-resolvers += {
-          val playPath = Option(System.getenv("PLAY_PATH")).getOrElse("../play")
-          Resolver.file("Local Play Repository", file(new File(playPath, "repository/local").getPath))(Resolver.ivyStylePatterns)
-}
+resolvers += playRepository
 
-resolvers += Resolver.url("Typesafe repository", url("http://repo.typesafe.com/typesafe/releases/"))(Resolver.ivyStylePatterns)
+resolvers += typesafeRepository
 
-addSbtPlugin("play" % "sbt-plugin" % Option(System.getenv("PLAY_VERSION")).getOrElse("2.0"))
+addSbtPlugin("play" % "sbt-plugin" % playVersion)
 
-publishTo := {
-          val playPath = Option(System.getenv("PLAY_PATH")).getOrElse("../play")
-          Some(Resolver.file("Local Play Repository", file(new File(playPath, "repository/local").getPath))(Resolver.ivyStylePatterns))
-}
+publishTo := Some(playRepository)
 
 publishMavenStyle := false
