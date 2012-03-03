@@ -57,8 +57,8 @@ object RoyCompiler {
     val f = new File("/tmp/roy.js")
     val is = new FileInputStream(f)
 
-    ctx.evaluateReader(scope,
-      new InputStreamReader(is),
+    ctx.evaluateReader(scope, new InputStreamReader(
+      this.getClass.getClassLoader.getResource("roy.js").openConnection().getInputStream()),
       "roy.js",
       1, null)
 
