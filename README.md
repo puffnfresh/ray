@@ -32,8 +32,15 @@ Then add the plugin to your application's `project/plugins.sbt`:
 
     addSbtPlugin("org.brianmckenna" % "ray" % "0.1")
 
-And finally add the following lines to the settings call in your
-application's `project/Build.scala`:
+Now you can add an import to your application's `project/Build.scala`:
+
+    import org.brianmckenna.ray.RoyBuild
+
+And extend your `Build` with the `RoyBuild` trait:
+
+    object ApplicationBuild extends Build with RoyBuild
+
+Finally add the following lines to the `settings` call:
 
     royEntryPoints <<= (sourceDirectory in Compile)(base => base / "assets" ** "*.roy"),
 
