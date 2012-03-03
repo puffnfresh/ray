@@ -2,8 +2,8 @@
 
 ## About
 
-Ray is a Roy 'compiled asset plugin' for Play 2.0 - it is similar to
-the built-in [CoffeeScript compiler][]. Roy files placed under
+Ray is a [Roy][] 'compiled asset plugin' for Play 2.0 - it is similar
+to the built-in [CoffeeScript compiler][]. Roy files placed under
 `app/assets/javascripts` will be requestable as if they were plain
 JavaScript files.
 
@@ -18,6 +18,7 @@ Play error page:
 
 ![](http://i.imgur.com/wJwAp.png)
 
+[Roy]: http://roy.brianmckenna.org/
 [CoffeeScript compiler]: https://github.com/playframework/Play20/wiki/AssetsCoffeeScript
 
 ## Installation
