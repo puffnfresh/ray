@@ -54,9 +54,6 @@ object RoyCompiler {
     val wrappedRoyCompiler = Context.javaToJS(this, scope)
     ScriptableObject.putProperty(scope, "RoyCompiler", wrappedRoyCompiler)
 
-    val f = new File("/tmp/roy.js")
-    val is = new FileInputStream(f)
-
     ctx.evaluateReader(scope, new InputStreamReader(
       this.getClass.getClassLoader.getResource("roy.js").openConnection().getInputStream()),
       "roy.js",
