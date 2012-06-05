@@ -4,7 +4,7 @@ name := "ray"
 
 organization := "org.brianmckenna"
 
-version := "0.1"
+version := "0.2-play2.1-0426"
 
 resolvers += playRepository
 
