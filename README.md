@@ -23,14 +23,20 @@ Play error page:
 
 ## Installation
 
-First you must publish the plugin to your Play 2.0 repository. You
-will have to specify your top level play directory and the version:
+First you must clone this Github repository locally.
+The you must publish the plugin to your Play 2.0 repository.
 
-    sbt -Dplay.path=../play-2.0-RC3 -Dplay.version=2.0-RC3 publish
+You will have to specify your top level play directory and the version:
+
+	sbt -Dplay.path=<play-top-level-directory> -Dplay.version=<play-version> publish-local
+
+Or if you installed play with Homebrew:
+
+	sbt -Dplay.path=/usr/local/Cellar/play -Dplay.version=<play-version> publish-local
 
 Then add the plugin to your application's `project/plugins.sbt`:
 
-    addSbtPlugin("org.brianmckenna" % "ray" % "0.1")
+    addSbtPlugin("org.brianmckenna" % "ray" % "0.2-play2.1-0426")
 
 Now you can add an import to your application's `project/Build.scala`:
 
