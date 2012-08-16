@@ -24,7 +24,7 @@ Play error page:
 ## Installation
 
 First you must clone this Github repository locally.
-The you must publish the plugin to your Play 2.0 repository.
+Then you must publish the plugin to your Play 2.0 repository.
 
 You will have to specify your top level play directory and the version:
 
