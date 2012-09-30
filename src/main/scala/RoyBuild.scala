@@ -11,6 +11,7 @@ trait RoyBuild {
   val royOptions = SettingKey[Seq[String]]("play-roy-options")
 
   val RoyCompiler = AssetsCompiler("roy",
+    (_ ** "*.roy"),
     royEntryPoints,
     { (name, min) => name.replace(".roy", if (min) ".min.js" else ".js") },
     { (royFile, options) =>
